@@ -1,16 +1,38 @@
-# ag55
+🌡️ Monitor de Temperatura y Humedad con Notificaciones en Tiempo Real
 
-A new Flutter project.
+Este proyecto consiste en el desarrollo de una aplicación móvil integrada con Firebase que recibe y muestra datos de temperatura y humedad en tiempo real, capturados por un controlador físico programado en Arduino (C++). La app está diseñada para notificar al usuario cuando los valores superan ciertos límites, facilitando el monitoreo de condiciones ambientales desde cualquier lugar.
 
-## Getting Started
+La solución es ideal para escenarios como agricultura, monitoreo en invernaderos, almacenamiento de alimentos, laboratorios, o cualquier entorno donde los cambios de temperatura y humedad sean críticos.
 
-This project is a starting point for a Flutter application.
+🚀 ¿Cómo funciona?
+Un Arduino equipado con sensores de temperatura y humedad (como DHT11 o DHT22) captura los datos del ambiente.
 
-A few resources to get you started if this is your first Flutter project:
+El microcontrolador, mediante código en C++, envía los datos a Firebase Realtime Database.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+La app móvil desarrollada en Flutter se conecta a Firebase para obtener los datos en tiempo real.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Si se detectan valores fuera de los rangos establecidos, la app envía una notificación push al usuario usando Firebase Cloud Messaging (FCM).
+
+La app también permite visualizar los valores actuales directamente en pantalla con una interfaz amigable.
+
+🧰 Tecnologías utilizadas
+Arduino (C++)
+
+Firebase Realtime Database
+
+Firebase Cloud Messaging (FCM)
+
+Flutter y C++
+
+Sensor DHT11 / DHT22
+
+ESP8266 / ESP32 (si aplica como conexión Wi-Fi)
+
+✅ Funcionalidades principales
+Lectura de temperatura y humedad en tiempo real.
+
+Envío de notificaciones push ante valores críticos.
+
+Visualización en la app con UI intuitiva.
+
+Comunicación eficiente entre hardware y software.
